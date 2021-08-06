@@ -29,15 +29,33 @@ class ViewController: UIViewController {
 
     @objc private func addSelectionFrame(_ sender: UITapGestureRecognizer) {
 
-        let tappedPoint = sender.location(in: view)
+        let tappedPoint = sender.location(in: imageView)
         let selectionFrame = generateAndShowSelectionFrame(to: tappedPoint)
+
+        let tappedPointForImage = convertImageOrigin(from: selectionFrame.frame, of: imageView)
+
+        if let croppedImageBitmap = imageView.image?.cgImage?.cropping(to: tappedPointForImage!) {
+
+            let trimmedImage = UIImage(cgImage: croppedImageBitmap)
+
+            let imageView = UIImageView(image: trimmedImage)
+            imageView.contentMode = .scaleAspectFit
+            stackView.addArrangedSubview(imageView)
+
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+
+            NSLayoutConstraint.activate([
+                imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor),
+                imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
+            ])
+        }
     }
 
     private func generateAndShowSelectionFrame(to location: CGPoint) -> SelectionFrameView {
 
         let frameView = SelectionFrameView(frame: CGRect(origin: location, size: .zero))
 
-        view.addSubview(frameView)
+        imageView.addSubview(frameView)
 
         return frameView
     }
