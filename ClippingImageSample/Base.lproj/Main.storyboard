@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house-sample" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-a0-JLX">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house-sample" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-a0-JLX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="658"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOl-6A-Xx1">
@@ -38,6 +38,10 @@
                             <constraint firstItem="wHV-a0-JLX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="whg-Cr-SsM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="wHV-a0-JLX" id="Yp9-bP-Ys5"/>
+                        <outlet property="stackView" destination="qOl-6A-Xx1" id="n9v-hH-qIs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,11 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var stackView: UIStackView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        setupImageView()
     }
 
+    // MARK: - private function
 
+    private func setupImageView() {
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self, action: #selector(addSelectionFrame(_:)))
+
+        imageView.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func addSelectionFrame(_ sender: UITapGestureRecognizer) {
+        view.backgroundColor = .red
+    }
 }
 
