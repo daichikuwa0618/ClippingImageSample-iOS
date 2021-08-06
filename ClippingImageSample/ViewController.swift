@@ -30,9 +30,16 @@ class ViewController: UIViewController {
     @objc private func addSelectionFrame(_ sender: UITapGestureRecognizer) {
 
         let tappedPoint = sender.location(in: view)
-        let frameView = SelectionFrameView(frame: CGRect(origin: tappedPoint, size: .zero))
+        let selectionFrame = generateAndShowSelectionFrame(to: tappedPoint)
+    }
+
+    private func generateAndShowSelectionFrame(to location: CGPoint) -> SelectionFrameView {
+
+        let frameView = SelectionFrameView(frame: CGRect(origin: location, size: .zero))
 
         view.addSubview(frameView)
+
+        return frameView
     }
 }
 
