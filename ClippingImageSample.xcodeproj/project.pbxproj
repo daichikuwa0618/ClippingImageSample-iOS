@@ -13,6 +13,7 @@
 		C9D164F926BCE60000A28338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D164F726BCE60000A28338 /* Main.storyboard */; };
 		C9D164FB26BCE61600A28338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D164FA26BCE61600A28338 /* Assets.xcassets */; };
 		C9D164FE26BCE61600A28338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D164FC26BCE61600A28338 /* LaunchScreen.storyboard */; };
+		C9D1650626BCEDB500A28338 /* SelectionFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D1650526BCEDB500A28338 /* SelectionFrameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C9D164FA26BCE61600A28338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9D164FD26BCE61600A28338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9D164FF26BCE61600A28338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D1650526BCEDB500A28338 /* SelectionFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionFrameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C9D164FA26BCE61600A28338 /* Assets.xcassets */,
 				C9D164FC26BCE61600A28338 /* LaunchScreen.storyboard */,
 				C9D164FF26BCE61600A28338 /* Info.plist */,
+				C9D1650526BCEDB500A28338 /* SelectionFrameView.swift */,
 			);
 			path = ClippingImageSample;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				C9D164F626BCE60000A28338 /* ViewController.swift in Sources */,
 				C9D164F226BCE60000A28338 /* AppDelegate.swift in Sources */,
 				C9D164F426BCE60000A28338 /* SceneDelegate.swift in Sources */,
+				C9D1650626BCEDB500A28338 /* SelectionFrameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
