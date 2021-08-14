@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         guard let image = imageView.image else { return nil }
 
         let imageViewAspectRatio = imageView.frame.width / imageView.frame.height
-        let imageAspectRatio = image.size.width / image.size.width
+        let imageAspectRatio = image.size.width / image.size.height
 
         let scaleX = image.size.width / imageView.frame.size.width
         let scaleY = image.size.height / imageView.frame.size.height
